@@ -3,8 +3,9 @@ using System.Collections;
 
 public class FireflySpawner : MonoBehaviour {
 	
-	public float spawnTime = 0.03f;		// The amount of time between each spawn.
+	public float spawnTime = 1f;		// The amount of time between each spawn.
 	public float spawnDelay = 0f;		// The amount of time before spawning starts.
+	public float spawnPercent = .2f;	// The percent change of a firefly spawning on tick
 
 	public GameObject firefly;
 
@@ -15,9 +16,9 @@ public class FireflySpawner : MonoBehaviour {
 	
 	void Spawn ()
 	{
-		int shouldSpawn = Random.Range(0, 10);
+		float shouldSpawn = Random.Range(0f, 1f);
 
-		if (shouldSpawn > 2) {
+		if (shouldSpawn < spawnPercent) {
 			Vector3 where = new Vector3(Random.Range(-6f, 6f), Random.Range(-5f, 6f), 0);
 
 			Instantiate(firefly, where, transform.rotation);
