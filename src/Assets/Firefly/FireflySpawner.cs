@@ -19,7 +19,7 @@ public class FireflySpawner : MonoBehaviour {
 		float shouldSpawn = Random.Range(0f, 1f);
 
 		if (shouldSpawn < spawnPercent) {
-			Vector3 where = new Vector3(Random.Range(-6f, 6f), Random.Range(-4.5f, 6f), 0);
+			Vector3 where = new Vector3(Random.Range(-6f, 6f), Random.Range(-3.5f, 6f), 0);
 
 			Instantiate(firefly, where, transform.rotation);
 		}
