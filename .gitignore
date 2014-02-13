@@ -3,6 +3,11 @@
 #################
 
 src/Temp/*
+src/Library/*
+src/UnityGenerated/*
+ExportedObj/*
+src/*.sln
+src/*.csproj
 
 #################
 ## Eclipse
